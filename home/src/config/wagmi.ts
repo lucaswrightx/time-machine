@@ -1,11 +1,11 @@
 import { getDefaultConfig } from '@rainbow-me/rainbowkit';
 import { sepolia } from 'wagmi/chains';
 
-const projectId = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID ?? '';
+const WALLETCONNECT_PROJECT_ID = 'YOUR_WALLETCONNECT_PROJECT_ID';
 
 export const config = getDefaultConfig({
   appName: 'Time Locked Messages',
-  projectId,
+  projectId: WALLETCONNECT_PROJECT_ID,
   chains: [sepolia],
   ssr: false,
 });
